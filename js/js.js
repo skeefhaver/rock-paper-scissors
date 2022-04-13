@@ -50,7 +50,19 @@ function game() {
     }
 }
 
-game();
+function quickGame() {
+    for (let i = 0; i < 5; i++) {
+        computerPlay();
+        let computerSelection = computerPlay();
+        playRound(playerSelection, computerSelection);
+    }
+    if (playerScore > computerScore) {
+        console.log('Congrats, you won the game');
+    } else if (playerScore < computerScore) {
+        console.log('You lost. The machines took over the world and it\'s all your fault!');
+    } else {
+        console.log('Game ended in a tie');
+    }
+}
 
-console.log(`Player score is ${playerScore}`);
-console.log(`Computer score is ${computerScore}`);
+quickGame();
