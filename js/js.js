@@ -38,9 +38,12 @@ function game() {
         computerPlay();
         let computerSelection = computerPlay();
 
-        if (playerScore > (bestOf / 2) || computerScore > (bestOf / 2)) {
+        if (playerScore > (bestOf / 2)) {
+            console.log('Congrats, you won the game!');
             keepGoing = false;
-
+        } else if (computerScore > (bestOf / 2)) {
+            console.log('You lost. The machines took over the world and it\'s all your fault!');
+            keepGoing = false;            
         } else {
             (playRound(playerSelection, computerSelection))
         }
