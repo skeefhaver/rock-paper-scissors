@@ -65,4 +65,15 @@ function quickGame() {
     }
 }
 
-quickGame();
+
+function gameOverall() {
+    let selector = prompt('Quick or Custom?');
+
+    if (selector == 'quick') {
+        quickGame();
+    } else {
+        game();
+    }
+}
+
+gameOverall();
