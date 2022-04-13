@@ -35,13 +35,12 @@ function game() {
     let bestOf = parseInt(prompt('Best of how many games?'));
 
     while (keepGoing) {
-       
         computerPlay();
         let computerSelection = computerPlay();
 
         if (playerScore > (bestOf / 2) || computerScore > (bestOf / 2)) {
             keepGoing = false;
-            break;
+
         } else {
             (playRound(playerSelection, computerSelection))
         }
